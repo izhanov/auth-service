@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 ruby "2.7.1"
 
@@ -15,10 +15,16 @@ gem "jwt", "~> 2.2.1"
 gem "pg", "~> 1.2.3"
 gem "puma", "~> 4.3.0"
 gem "rake", "~> 13.0.1"
+gem "roda", "~> 3.32"
 gem "sequel", "~> 5.32.0"
+
+group :development do
+  gem "rack-unreloader", "~> 1.7.0"
+end
 
 group :test do
   gem "database_cleaner-sequel"
   gem "factory_bot", "~> 5.2.0"
+  gem "rack-test", "~> 1.1.0"
   gem "rspec"
 end
