@@ -1,3 +1,6 @@
 # frozen_string_literal: true
 
-# Need choose a framework
+class Application < Roda
+  plugin :json
+  plugin :all_verbs
+end
