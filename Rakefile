@@ -2,4 +2,4 @@
 
 ENV["RACK_ENV"] ||= "development"
 
-Rake.add_rakelib("rake/**")
+Rake.add_rakelib("rakelib/**")
