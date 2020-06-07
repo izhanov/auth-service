@@ -2,6 +2,7 @@
 
 class User < Sequel::Model
   one_to_many :sessions, class: :UserSession
+  include BCrypt
 
   def before_create
     self.email = email.downcase.strip
@@ -10,6 +11,6 @@ class User < Sequel::Model
   end
 
   def password_valid?(password)
-    BCrypt::Password.new(password_digest) == password
+    Password.new(password_digest) == password
   end
 end
