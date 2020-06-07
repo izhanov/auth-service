@@ -6,6 +6,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 ruby "2.7.1"
 
+gem "bcrypt", "~> 3.1.13"
 gem "dotenv", "~> 2.7.5"
 gem "dry-monads", "~> 1.3.5"
 gem "dry-validation", "~> 1.5.0"
@@ -25,6 +26,7 @@ end
 group :test do
   gem "database_cleaner-sequel"
   gem "factory_bot", "~> 5.2.0"
+  gem "faker", git: "https://github.com/stympy/faker.git"
   gem "rack-test", "~> 1.1.0"
   gem "rspec"
 end
