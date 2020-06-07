@@ -15,6 +15,7 @@ namespace :db do
 
       # Create db/schema.rb after run migrations
       `bin/sequel -D #{ENV["DATABASE_URL"]} > ./db/schema.rb`
+      puts "=============== migration complete"
     end
   end
 end
