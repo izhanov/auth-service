@@ -6,7 +6,7 @@ module Boot
   def setup
     connect_to_db
     require_app
-    initialize_app
+    init_app
   end
 
   private
@@ -17,11 +17,16 @@ module Boot
 
   def require_app
     require_file "config/application"
+    require_file "config/initializers/i18n"
+    require_file "app/services/operations/users/create"
+    require_file "app/services/validations/user/create"
+    require_dir "app/services/utils"
     require_dir "app"
   end
 
-  def initialize_app
-    require_dir "config/initializers"
+  def init_app
+    require_file "config/initializers/i18n"
+    require_file "config/initializers/dry_validation"
   end
 
   def require_file(path)
