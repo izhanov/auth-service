@@ -1,0 +1,5 @@
+ru:
+  sessions:
+    user:
+      not_found: "Пользователь с данным email не зарегистрирован"
+      unauthorized: "Сессия не может быть создана"

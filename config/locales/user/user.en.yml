@@ -1,0 +1,3 @@
+en:
+  user:
+    not_unique: "This email is already registered"

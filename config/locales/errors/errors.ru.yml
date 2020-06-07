@@ -102,6 +102,9 @@ ru:
         password_confirmation:
           password_confirmation_mismatch: "Пароли не совпадают"
 
+        password:
+          password_min_size?: "Пароль не должен быть меньше 6 символов"
+
         kind:
           invalid_kind: "Не верный тип соц. сети"
 

@@ -99,6 +99,9 @@ en:
         currency:
           currency_format: "Must be in ISO4217 format"
 
+        password:
+          password_min_size?: "Password size cannot be less than 6 symbols"
+
         password_confirmation:
           password_confirmation_mismatch: "doesn't match Password"
 

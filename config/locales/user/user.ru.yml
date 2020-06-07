@@ -1,0 +1,3 @@
+ru:
+  user:
+    not_unique: "Данный Email уже зарегистрирован"

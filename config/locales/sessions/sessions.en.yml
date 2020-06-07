@@ -1,0 +1,5 @@
+en:
+  sessions:
+    user:
+      not_found: "This Email is not registered in the system"
+      unauthorized: "Session cannot be created"
