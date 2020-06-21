@@ -6,6 +6,7 @@ class Application < Roda
   plugin :json
   plugin :all_verbs
   plugin :param_matchers
+  plugin :request_headers
 
   include Dry::Monads[:result]
 end
