@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-ruby "2.7.1"
+ruby "2.7.0"
 
 gem "bcrypt", "~> 3.1.13"
 gem "dotenv", "~> 2.7.5"
@@ -19,7 +19,8 @@ gem "rake", "~> 13.0.1"
 gem "roda", "~> 3.32"
 gem "sequel", "~> 5.32.0"
 
-group :development do
+group :development, :test do
+  gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "rack-unreloader", "~> 1.7.0"
 end
 
