@@ -102,4 +102,37 @@ RSpec.describe AuthRoutes, type: :routes do
       end
     end
   end
+
+  describe "POST /auth/v1/authenticate" do
+    context "when user's token invalid" do
+      it "returns 403 error" do
+        header "Authorization", "Bearer invalid token"
+        post "/auth/v1/authenticate"
+        expect(response.status).to eq(403)
+        expect(response.body).to include(
+          {
+            code: "authentication_error",
+            payload: "Неверный формат токена"
+          }
+        )
+      end
+    end
+
+    context "when user's token valid" do
+      let!(:user) { create(:user) }
+      let!(:session) { create(:user_session, user: user) }
+
+      before do
+        allow(JWT).to receive(:decode).and_return([session.uuid])
+      end
+
+      it "returns user's ID" do
+        header "Authorization", "Bearer valid token"
+        post "/auth/v1/authenticate"
+
+        expect(response.status).to eq(201)
+        expect(response.body).to include(user_id: user.id)
+      end
+    end
+  end
 end

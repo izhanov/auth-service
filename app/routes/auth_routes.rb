@@ -5,9 +5,11 @@ class AuthRoutes < Application
     r.on "auth" do
       r.on "v1" do
         r.is "sign_up" do
+          signup_params = request.params.deep_symbolize_keys
+
           r.post do
             operation = Operations::Users::Create.new
-            result = operation.call(request.params)
+            result = operation.call(signup_params)
 
             case result
             when Success
@@ -21,9 +23,11 @@ class AuthRoutes < Application
         end
 
         r.is "login" do
+          login_params = request.params.deep_symbolize_keys
+
           r.post do
             operation = Operations::UserSessions::Create.new
-            result = operation.call(request.params.deep_symbolize_keys)
+            result = operation.call(login_params)
 
             case result
             when Success
@@ -32,6 +36,25 @@ class AuthRoutes < Application
               response.finish
             when Failure
               response.status = 401
+              result.failure
+            end
+          end
+        end
+
+        r.is "authenticate" do
+          auth_header = /\ABearer (?<token>.+)\z/.match(request.headers["Authorization"])
+          token = auth_header[:token]
+
+          r.post do
+            operation = Operations::UserSessions::Authenticate.new
+            result = operation.call(token)
+
+            case result
+            when Success
+              response.status = 201
+              { user_id: result.value!.user_id }
+            when Failure
+              response.status = 403
               result.failure
             end
           end
