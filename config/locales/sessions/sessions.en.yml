@@ -3,3 +3,6 @@ en:
     user:
       not_found: "This Email is not registered in the system"
       unauthorized: "Session cannot be created"
+    token:
+      invalid: "Unexpected token format"
+      not_found: "Токен не действителен или истек срок"
