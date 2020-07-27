@@ -5,13 +5,21 @@ module Operations
     class Authenticate
       include Dry::Monads[:result, :do]
 
-      def call(token)
+      def call(auth_header)
+        token = yield extract_token(auth_header)
         decoded_token = yield decode(token)
         session = yield find_session(decoded_token)
         Success(session)
       end
 
       private
+
+      def extract_token(auth_header)
+        value = /\ABearer (?<token>.+)\z/.match(auth_header)
+        return Failure(code: :authentication_error, payload: I18n.t("sessions.token.missing")) unless value
+
+        Success(value[:token])
+      end
 
       def decode(token)
         decoded_token = Utils::JWTEncoder.decode(token)

@@ -104,6 +104,19 @@ RSpec.describe AuthRoutes, type: :routes do
   end
 
   describe "POST /auth/v1/authenticate" do
+    context "when token is missing" do
+      it "returns 403 error" do
+        post "/auth/v1/authenticate"
+        expect(response.status).to eq(403)
+        expect(response.body).to include(
+          {
+            code: "authentication_error",
+            payload: "Отсутствует заголовок авторизации"
+          }
+        )
+      end
+    end
+
     context "when user's token invalid" do
       it "returns 403 error" do
         header "Authorization", "Bearer invalid token"
@@ -129,9 +142,8 @@ RSpec.describe AuthRoutes, type: :routes do
       it "returns user's ID" do
         header "Authorization", "Bearer valid token"
         post "/auth/v1/authenticate"
-
         expect(response.status).to eq(201)
-        expect(response.body).to include(user_id: user.id)
+        expect(response.body).to include( meta: { user_id: user.id } )
       end
     end
   end

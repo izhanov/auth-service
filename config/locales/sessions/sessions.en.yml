@@ -6,3 +6,4 @@ en:
     token:
       invalid: "Unexpected token format"
       not_found: "Токен не действителен или истек срок"
+      missing: "Authorization token is missing"

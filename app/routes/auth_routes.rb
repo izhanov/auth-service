@@ -42,17 +42,16 @@ class AuthRoutes < Application
         end
 
         r.is "authenticate" do
-          auth_header = /\ABearer (?<token>.+)\z/.match(request.headers["Authorization"])
-          token = auth_header[:token]
+          auth_header = request.headers["Authorization"]
 
           r.post do
             operation = Operations::UserSessions::Authenticate.new
-            result = operation.call(token)
+            result = operation.call(auth_header)
 
             case result
             when Success
               response.status = 201
-              { user_id: result.value!.user_id }
+              { meta: { user_id: result.value!.user_id } }
             when Failure
               response.status = 403
               result.failure
