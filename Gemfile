@@ -7,6 +7,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 ruby "2.7.0"
 
 gem "bcrypt", "~> 3.1.13"
+gem "bunny", "~> 2.15.0"
 gem "dotenv", "~> 2.7.5"
 gem "dry-monads", "~> 1.3.5"
 gem "dry-validation", "~> 1.5.0"
