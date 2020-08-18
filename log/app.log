@@ -1,0 +1,111 @@
+{"name":"puma","hostname":"vincijun","pid":13534,"level":30,"time":"2020-08-11T10:16:35.986+06:00","v":0,"msg":"(0.011148s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":13534,"level":30,"time":"2020-08-11T04:16:35.972+00:00","v":0,"msg":"http","usec":19073,"remote_addr":"127.0.0.1","method":"POST","path":"/auth/v1/authenticate","query":"","status":201,"service":{"name":"auth"}}
+[2020-08-11T10:39:40.348+06:00] [0;36mINFO[0m: (0.002475s) SELECT * FROM "user_sessions" WHERE ("uuid" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T10:39:40.355+06:00] [0;36mINFO[0m: http
+{
+           :time[0;37m => [0m[0;32m2020-08-11 04:39:40.343611083 UTC[0m,
+           :usec[0;37m => [0m[1;34m12252[0m,
+    :remote_addr[0;37m => [0m[0;33m"127.0.0.1"[0m,
+         :method[0;37m => [0m[0;33m"POST"[0m,
+           :path[0;37m => [0m[0;33m"/auth/v1/authenticate"[0m,
+          :query[0;37m => [0m[0;33m""[0m,
+         :status[0;37m => [0m[1;34m201[0m,
+        :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+{"name":"puma","hostname":"vincijun","pid":19972,"level":30,"time":"2020-08-11T11:00:22.090+06:00","v":0,"msg":"(0.002572s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":19972,"level":30,"time":"2020-08-11T05:00:22.085+00:00","v":0,"msg":"http","usec":7631,"remote_addr":"127.0.0.1","method":"POST","path":"/auth/v1/authenticate","query":"","status":201,"service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":20116,"level":30,"time":"2020-08-11T11:01:04.296+06:00","v":0,"msg":"(0.002645s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":20116,"level":30,"time":"2020-08-11T05:01:04.291+00:00","v":0,"msg":"http","usec":8402,"remote_addr":"127.0.0.1","method":"POST","path":"/auth/v1/authenticate","query":"","status":201,"service":{"name":"auth"}}
+[2020-08-11T11:02:40.021+06:00] [0;36mINFO[0m: (0.002640s) SELECT * FROM "user_sessions" WHERE ("uuid" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T11:02:40.025+06:00] [0;36mINFO[0m: http
+{
+           :time[0;37m => [0m[0;32m2020-08-11 05:02:40.0163018 UTC[0m,
+           :usec[0;37m => [0m[1;34m9065[0m,
+    :remote_addr[0;37m => [0m[0;33m"127.0.0.1"[0m,
+         :method[0;37m => [0m[0;33m"POST"[0m,
+           :path[0;37m => [0m[0;33m"/auth/v1/authenticate"[0m,
+          :query[0;37m => [0m[0;33m""[0m,
+         :status[0;37m => [0m[1;34m201[0m,
+        :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:17:46.245+06:00] [0;36mINFO[0m: (0.012584s) SELECT * FROM "users" WHERE ("email" = 'i61@gmail.com') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:17:46.256+06:00] [0;36mINFO[0m: (0.000463s) BEGIN
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:17:46.272+06:00] [0;36mINFO[0m: (0.014499s) INSERT INTO "user_sessions" ("user_id", "uuid", "created_at", "updated_at") VALUES (20, '5c781d23-717b-4c0f-92b6-ad12be78f4c2', '2020-08-11 08:17:46.256223+0000', '2020-08-11 08:17:46.256223+0000') RETURNING *
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:17:46.279+06:00] [0;36mINFO[0m: (0.004678s) COMMIT
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:17:46.280+06:00] [0;36mINFO[0m: http
+{
+           :time[0;37m => [0m[0;32m2020-08-11 08:17:46.208230882 UTC[0m,
+           :usec[0;37m => [0m[1;34m72494[0m,
+    :remote_addr[0;37m => [0m[0;33m"127.0.0.1"[0m,
+         :method[0;37m => [0m[0;33m"POST"[0m,
+           :path[0;37m => [0m[0;33m"/auth/v1/login"[0m,
+          :query[0;37m => [0m[0;33m"email=i61@gmail.com&password=password"[0m,
+         :status[0;37m => [0m[1;34m201[0m,
+        :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:26:14.607+06:00] [0;36mINFO[0m: (0.005651s) SELECT * FROM "user_sessions" WHERE ("uuid" = '5c781d23-717b-4c0f-92b6-ad12be78f4c2') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:29:30.462+06:00] [0;36mINFO[0m: (0.001985s) SELECT * FROM "user_sessions" WHERE ("uuid" = '5c781d23-717b-4c0f-92b6-ad12be78f4c2') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T15:50:41.220+06:00] [0;36mINFO[0m: (0.002485s) SELECT * FROM "user_sessions" WHERE ("uuid" = '5c781d23-717b-4c0f-92b6-ad12be78f4c2') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T15:52:55.994+06:00] [0;36mINFO[0m: (0.001357s) SELECT * FROM "user_sessions" WHERE ("uuid" = '5c781d23-717b-4c0f-92b6-ad12be78f4c2') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T15:54:30.003+06:00] [0;36mINFO[0m: (0.001334s) SELECT * FROM "user_sessions" WHERE ("uuid" = '5c781d23-717b-4c0f-92b6-ad12be78f4c2') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}

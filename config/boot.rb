@@ -28,6 +28,7 @@ module Boot
     require_file "config/initializers/i18n"
     require_file "config/initializers/dry_validation"
     require_file "config/initializers/consumer"
+    require_file "config/initializers/logger"
   end
 
   def require_file(path)
