@@ -5,7 +5,7 @@ queue = channel.queue("authentication", durable: true)
 
 queue.subscribe do |deleviry_info, properties, payload|
   token = JSON.parse(payload).dig("token")
-  puts token
+
   operation = Operations::UserSessions::Authenticate.new
   session = operation.call(token)
 
