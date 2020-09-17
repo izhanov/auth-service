@@ -1,0 +1,144 @@
+{"name":"puma","hostname":"vincijun","pid":13534,"level":30,"time":"2020-08-11T10:16:35.986+06:00","v":0,"msg":"(0.011148s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":13534,"level":30,"time":"2020-08-11T04:16:35.972+00:00","v":0,"msg":"http","usec":19073,"remote_addr":"127.0.0.1","method":"POST","path":"/auth/v1/authenticate","query":"","status":201,"service":{"name":"auth"}}
+[2020-08-11T10:39:40.348+06:00] [0;36mINFO[0m: (0.002475s) SELECT * FROM "user_sessions" WHERE ("uuid" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T10:39:40.355+06:00] [0;36mINFO[0m: http
+{
+           :time[0;37m => [0m[0;32m2020-08-11 04:39:40.343611083 UTC[0m,
+           :usec[0;37m => [0m[1;34m12252[0m,
+    :remote_addr[0;37m => [0m[0;33m"127.0.0.1"[0m,
+         :method[0;37m => [0m[0;33m"POST"[0m,
+           :path[0;37m => [0m[0;33m"/auth/v1/authenticate"[0m,
+          :query[0;37m => [0m[0;33m""[0m,
+         :status[0;37m => [0m[1;34m201[0m,
+        :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+{"name":"puma","hostname":"vincijun","pid":19972,"level":30,"time":"2020-08-11T11:00:22.090+06:00","v":0,"msg":"(0.002572s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":19972,"level":30,"time":"2020-08-11T05:00:22.085+00:00","v":0,"msg":"http","usec":7631,"remote_addr":"127.0.0.1","method":"POST","path":"/auth/v1/authenticate","query":"","status":201,"service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":20116,"level":30,"time":"2020-08-11T11:01:04.296+06:00","v":0,"msg":"(0.002645s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":20116,"level":30,"time":"2020-08-11T05:01:04.291+00:00","v":0,"msg":"http","usec":8402,"remote_addr":"127.0.0.1","method":"POST","path":"/auth/v1/authenticate","query":"","status":201,"service":{"name":"auth"}}
+[2020-08-11T11:02:40.021+06:00] [0;36mINFO[0m: (0.002640s) SELECT * FROM "user_sessions" WHERE ("uuid" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T11:02:40.025+06:00] [0;36mINFO[0m: http
+{
+           :time[0;37m => [0m[0;32m2020-08-11 05:02:40.0163018 UTC[0m,
+           :usec[0;37m => [0m[1;34m9065[0m,
+    :remote_addr[0;37m => [0m[0;33m"127.0.0.1"[0m,
+         :method[0;37m => [0m[0;33m"POST"[0m,
+           :path[0;37m => [0m[0;33m"/auth/v1/authenticate"[0m,
+          :query[0;37m => [0m[0;33m""[0m,
+         :status[0;37m => [0m[1;34m201[0m,
+        :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:17:46.245+06:00] [0;36mINFO[0m: (0.012584s) SELECT * FROM "users" WHERE ("email" = 'i61@gmail.com') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:17:46.256+06:00] [0;36mINFO[0m: (0.000463s) BEGIN
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:17:46.272+06:00] [0;36mINFO[0m: (0.014499s) INSERT INTO "user_sessions" ("user_id", "uuid", "created_at", "updated_at") VALUES (20, '5c781d23-717b-4c0f-92b6-ad12be78f4c2', '2020-08-11 08:17:46.256223+0000', '2020-08-11 08:17:46.256223+0000') RETURNING *
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:17:46.279+06:00] [0;36mINFO[0m: (0.004678s) COMMIT
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:17:46.280+06:00] [0;36mINFO[0m: http
+{
+           :time[0;37m => [0m[0;32m2020-08-11 08:17:46.208230882 UTC[0m,
+           :usec[0;37m => [0m[1;34m72494[0m,
+    :remote_addr[0;37m => [0m[0;33m"127.0.0.1"[0m,
+         :method[0;37m => [0m[0;33m"POST"[0m,
+           :path[0;37m => [0m[0;33m"/auth/v1/login"[0m,
+          :query[0;37m => [0m[0;33m"email=i61@gmail.com&password=password"[0m,
+         :status[0;37m => [0m[1;34m201[0m,
+        :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:26:14.607+06:00] [0;36mINFO[0m: (0.005651s) SELECT * FROM "user_sessions" WHERE ("uuid" = '5c781d23-717b-4c0f-92b6-ad12be78f4c2') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T14:29:30.462+06:00] [0;36mINFO[0m: (0.001985s) SELECT * FROM "user_sessions" WHERE ("uuid" = '5c781d23-717b-4c0f-92b6-ad12be78f4c2') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T15:50:41.220+06:00] [0;36mINFO[0m: (0.002485s) SELECT * FROM "user_sessions" WHERE ("uuid" = '5c781d23-717b-4c0f-92b6-ad12be78f4c2') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T15:52:55.994+06:00] [0;36mINFO[0m: (0.001357s) SELECT * FROM "user_sessions" WHERE ("uuid" = '5c781d23-717b-4c0f-92b6-ad12be78f4c2') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+[2020-08-11T15:54:30.003+06:00] [0;36mINFO[0m: (0.001334s) SELECT * FROM "user_sessions" WHERE ("uuid" = '5c781d23-717b-4c0f-92b6-ad12be78f4c2') LIMIT 1
+{
+    :service[0;37m => [0m{
+        :name[0;37m => [0m[0;33m"auth"[0m
+    }
+}
+{"name":"puma","hostname":"vincijun","pid":4373,"level":30,"time":"2020-08-18T15:45:25.192+06:00","v":0,"msg":"(0.002863s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = '5c781d23-717b-4c0f-92b6-ad12be78f4c2') LIMIT 1","service":{"name":"auth"},"request_id":"e425897662a2ffec5e022f5235ae1244"}
+{"name":"puma","hostname":"vincijun","pid":4373,"level":30,"time":"2020-08-18T09:45:25.187+00:00","v":0,"msg":"http","usec":8485,"remote_addr":"127.0.0.1","method":"POST","path":"/auth/v1/authenticate","query":"","status":201,"service":{"name":"auth"},"request_id":"e425897662a2ffec5e022f5235ae1244"}
+{"name":"puma","hostname":"vincijun","pid":4373,"level":30,"time":"2020-08-18T15:45:49.649+06:00","v":0,"msg":"(0.001643s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"request_id":"d5db45a187a6f74df34453f0aa12c51b"}
+{"name":"puma","hostname":"vincijun","pid":4373,"level":30,"time":"2020-08-18T09:45:49.645+00:00","v":0,"msg":"http","usec":5394,"remote_addr":"127.0.0.1","method":"POST","path":"/auth/v1/authenticate","query":"","status":201,"service":{"name":"auth"},"request_id":"d5db45a187a6f74df34453f0aa12c51b"}
+{"name":"puma","hostname":"vincijun","pid":4373,"level":30,"time":"2020-08-18T15:46:08.267+06:00","v":0,"msg":"(0.001429s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"request_id":"c5369dcafb09ce5a6c141dbe09c2be35"}
+{"name":"puma","hostname":"vincijun","pid":4373,"level":30,"time":"2020-08-18T09:46:08.264+00:00","v":0,"msg":"http","usec":5782,"remote_addr":"127.0.0.1","method":"POST","path":"/auth/v1/authenticate","query":"","status":201,"service":{"name":"auth"},"request_id":"c5369dcafb09ce5a6c141dbe09c2be35"}
+{"name":"puma","hostname":"vincijun","pid":4373,"level":30,"time":"2020-08-18T15:47:05.917+06:00","v":0,"msg":"(0.005275s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"request_id":"45009e487a4146f64a20e32c9b5fc348"}
+{"name":"puma","hostname":"vincijun","pid":4373,"level":30,"time":"2020-08-18T09:47:05.910+00:00","v":0,"msg":"http","usec":9000,"remote_addr":"127.0.0.1","method":"POST","path":"/auth/v1/authenticate","query":"","status":201,"service":{"name":"auth"},"request_id":"45009e487a4146f64a20e32c9b5fc348"}
+{"name":"puma","hostname":"vincijun","pid":4373,"level":30,"time":"2020-08-18T15:49:02.829+06:00","v":0,"msg":"(0.001471s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"request_id":null}
+{"name":"puma","hostname":"vincijun","pid":4373,"level":30,"time":"2020-08-18T15:49:34.892+06:00","v":0,"msg":"(0.001417s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"request_id":null}
+{"name":"puma","hostname":"vincijun","pid":4373,"level":30,"time":"2020-08-18T15:49:56.061+06:00","v":0,"msg":"(0.001059s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"request_id":null}
+{"name":"puma","hostname":"vincijun","pid":5664,"level":30,"time":"2020-08-18T15:52:57.838+06:00","v":0,"msg":"(0.003487s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"request_id":null}
+{"name":"puma","hostname":"vincijun","pid":11406,"level":30,"time":"2020-08-18T16:07:29.422+06:00","v":0,"msg":"(0.003644s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"request_id":null}
+{"name":"console","hostname":"vincijun","pid":12043,"level":30,"time":"2020-08-18T16:09:43.026+06:00","v":0,"msg":"(0.002073s) SELECT * FROM \"user_sessions\"","service":{"name":"auth"},"request_id":null}
+{"name":"console","hostname":"vincijun","pid":12043,"level":30,"time":"2020-08-18T16:09:45.971+06:00","v":0,"msg":"(0.001143s) SELECT * FROM \"user_sessions\"","service":{"name":"auth"},"request_id":null}
+{"name":"console","hostname":"vincijun","pid":12043,"level":30,"time":"2020-08-18T16:09:49.753+06:00","v":0,"msg":"(0.001120s) SELECT * FROM \"user_sessions\"","service":{"name":"auth"},"request_id":null}
+{"name":"puma","hostname":"vincijun","pid":11406,"level":30,"time":"2020-08-18T16:15:25.975+06:00","v":0,"msg":"(0.001506s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"request_id":null}
+{"name":"puma","hostname":"vincijun","pid":11406,"level":30,"time":"2020-08-18T16:20:00.196+06:00","v":0,"msg":"(0.001231s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"request_id":null}
+{"name":"puma","hostname":"vincijun","pid":17837,"level":30,"time":"2020-08-18T16:39:41.713+06:00","v":0,"msg":"(0.003037s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"request_id":null}
+{"name":"puma","hostname":"vincijun","pid":19204,"level":30,"time":"2020-08-18T16:46:25.177+06:00","v":0,"msg":"(0.003264s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":20428,"level":30,"time":"2020-08-18T16:51:47.663+06:00","v":0,"msg":"(0.003827s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"session_uuid":null}
+{"name":"puma","hostname":"vincijun","pid":20428,"level":30,"time":"2020-08-18T16:58:51.118+06:00","v":0,"msg":"(0.001247s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"session_uuid":null}
+{"name":"puma","hostname":"vincijun","pid":20428,"level":30,"time":"2020-08-18T16:59:58.124+06:00","v":0,"msg":"(0.001269s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"},"session_uuid":null}
+{"name":"puma","hostname":"vincijun","pid":6051,"level":30,"time":"2020-08-19T22:00:49.142+06:00","v":0,"msg":"(0.011335s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":19533,"level":30,"time":"2020-08-19T22:21:40.574+06:00","v":0,"msg":"(0.002648s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":23162,"level":30,"time":"2020-08-19T22:36:27.954+06:00","v":0,"msg":"(0.002681s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":29845,"level":30,"time":"2020-08-19T23:00:40.878+06:00","v":0,"msg":"(0.002599s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":29845,"level":30,"time":"2020-08-19T17:00:40.874+00:00","v":0,"msg":"http","usec":7441,"remote_addr":"127.0.0.1","method":"POST","path":"/auth/v1/authenticate","query":"","status":201,"service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":29845,"level":30,"time":"2020-08-19T23:00:58.318+06:00","v":0,"msg":"(0.001262s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":804,"level":30,"time":"2020-08-19T23:12:44.798+06:00","v":0,"msg":"(0.002627s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":804,"level":30,"time":"2020-08-19T23:26:42.641+06:00","v":0,"msg":"(0.001467s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":804,"level":30,"time":"2020-08-19T23:59:44.051+06:00","v":0,"msg":"(0.001362s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}
+{"name":"puma","hostname":"vincijun","pid":804,"level":30,"time":"2020-08-20T00:16:00.576+06:00","v":0,"msg":"(0.017944s) SELECT * FROM \"user_sessions\" WHERE (\"uuid\" = 'fd682bf2-04a9-4cd2-81b0-730a6ea3fb48') LIMIT 1","service":{"name":"auth"}}

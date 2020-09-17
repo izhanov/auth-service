@@ -6,6 +6,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 ruby "2.7.0"
 
+gem "amazing_print"
 gem "bcrypt", "~> 3.1.13"
 gem "bunny", "2.15.0"
 gem "dotenv", "~> 2.7.5"
@@ -16,6 +17,8 @@ gem "i18n"
 gem "jwt", "~> 2.2.1"
 gem "pg", "~> 1.2.3"
 gem "puma", "~> 4.3.0"
+gem "rack-ougai", "~> 0.2.1"
+gem "rack-request-id", "~> 0.0.4"
 gem "rake", "~> 13.0.1"
 gem "roda", "~> 3.32"
 gem "sequel", "~> 5.32.0"

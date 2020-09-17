@@ -14,7 +14,7 @@ class AuthRoutes < Application
             case result
             when Success
               response.status = 201
-              response.finish
+              response.write("Success")
             when Failure
               response.status = 422
               result.failure
@@ -24,7 +24,6 @@ class AuthRoutes < Application
 
         r.is "login" do
           login_params = request.params.deep_symbolize_keys
-
           r.post do
             operation = Operations::UserSessions::Create.new
             result = operation.call(login_params)
@@ -33,7 +32,6 @@ class AuthRoutes < Application
             when Success
               response.status = 201
               response["meta"] = { token: Utils::JWTEncoder.encode(result.value!.uuid) }
-              response.finish
             when Failure
               response.status = 401
               result.failure
@@ -57,6 +55,12 @@ class AuthRoutes < Application
               response.status = 403
               result.failure
             end
+          end
+        end
+
+        r.is "wtf" do
+          r.post do
+            {ok: "wtf"}
           end
         end
       end
