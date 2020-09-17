@@ -27,6 +27,7 @@ module Boot
   def init_app
     require_file "config/initializers/i18n"
     require_file "config/initializers/dry_validation"
+    require_file "config/initializers/consumer"
   end
 
   def require_file(path)
